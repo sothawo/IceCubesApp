@@ -13,25 +13,25 @@ struct SwipeActionsSettingsView: View {
         Picker("settings.swipeactions.status.left.1",
                selection: $userPreferences.swipeActionsStatusLeft1) {
           ForEach(StatusAction.allCases, id: \.rawValue) { action in
-            Text(action.displayName).tag(action)
+            Label(action.displayName, systemImage: action.iconName()).tag(action)
           }
         }
         Picker("settings.swipeactions.status.left.2",
                selection: $userPreferences.swipeActionsStatusLeft2) {
           ForEach(StatusAction.allCases, id: \.rawValue) { action in
-            Text(action.displayName).tag(action)
+            Label(action.displayName, systemImage: action.iconName()).tag(action)
           }
         }
         Picker("settings.swipeactions.status.right.1",
                selection: $userPreferences.swipeActionsStatusRight1) {
           ForEach(StatusAction.allCases, id: \.rawValue) { action in
-            Text(action.displayName).tag(action)
+            Label(action.displayName, systemImage: action.iconName()).tag(action)
           }
         }
         Picker("settings.swipeactions.status.right.2",
                selection: $userPreferences.swipeActionsStatusRight2) {
           ForEach(StatusAction.allCases, id: \.rawValue) { action in
-            Text(action.displayName).tag(action)
+            Label(action.displayName, systemImage: action.iconName()).tag(action)
           }
         }
       }
